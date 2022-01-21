@@ -26,3 +26,5 @@ nfs-utils
 unbound
 dnssec-anchors
 openresolv
+postgresql-libs
+transmission-qt
