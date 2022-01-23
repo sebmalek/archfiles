@@ -2,6 +2,8 @@ htop
 sudo
 nano
 vim
+xclip
+rxvt-unicode
 zsh
 whois
 traceroute
