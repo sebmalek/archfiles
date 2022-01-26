@@ -8,6 +8,7 @@ zsh
 whois
 traceroute
 python
+python-pip
 unzip
 curl
 wget
@@ -20,7 +21,6 @@ iftop
 nmap
 wireguard-tools
 polkit
-ranger
 pulseaudio
 pavucontrol
 keepassxc
@@ -30,3 +30,4 @@ dnssec-anchors
 openresolv
 postgresql-libs
 transmission-qt
+thunar
