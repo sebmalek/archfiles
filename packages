@@ -31,3 +31,4 @@ openresolv
 postgresql-libs
 transmission-qt
 thunar
+rsync
