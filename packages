@@ -50,6 +50,7 @@ rsync
 iftop
 whois
 traceroute
+net-tools
 
 # development
 python
