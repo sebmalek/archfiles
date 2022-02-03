@@ -44,3 +44,4 @@ traceroute
 python
 python-pip
 postgresql-libs
+docker
