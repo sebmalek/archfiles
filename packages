@@ -1,4 +1,6 @@
 polkit
+
+# dns
 unbound
 dnssec-anchors
 openresolv
@@ -8,6 +10,9 @@ pulseaudio
 pavucontrol
 
 # gui
+lightdm
+lightdm-gtk-greeter
+numlockx
 i3-wm
 i3status
 i3lock
