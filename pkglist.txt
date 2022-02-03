@@ -1,39 +1,3 @@
-polkit
-
-# dns
-unbound
-dnssec-anchors
-openresolv
-
-# audio
-pulseaudio
-pavucontrol
-
-# lightdm
-lightdm
-lightdm-gtk-greeter
-
-# lightdm: numlock on by default
-# make sure to set greeter-setup-script=/usr/bin/numlockx on
-# in /etc/lightdm/lightdm.conf
-numlockx
-
-# gui
-i3-wm
-i3status
-i3lock
-dmenu
-thunar
-rxvt-unicode
-
-# apps
-flatpak
-keepassxc
-transmission-qt
-filezilla
-torbrowser-launcher
-
-# system
 sudo
 zsh
 nfs-utils
@@ -45,16 +9,39 @@ xclip
 nano
 vim
 xclip
-
-# tools
-nmap
 rsync
 iftop
 whois
 traceroute
 net-tools
 
-# development
+lightdm
+lightdm-gtk-greeter
+numlockx
+
+i3-wm
+i3status
+i3lock
+dmenu
+thunar
+rxvt-unicode
+
+polkit
+
+unbound
+dnssec-anchors
+openresolv
+
+pulseaudio
+pavucontrol
+
+flatpak
+keepassxc
+transmission-qt
+filezilla
+torbrowser-launcher
+nmap
+
 python
 python-pip
 postgresql-libs
