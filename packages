@@ -1,34 +1,46 @@
-htop
-sudo
-nano
-vim
-xclip
-rxvt-unicode
-zsh
-whois
-traceroute
-python
-python-pip
-unzip
-curl
-wget
+polkit
+unbound
+dnssec-anchors
+openresolv
+
+# audio
+pulseaudio
+pavucontrol
+
+# gui
 i3-wm
 i3status
 i3lock
 dmenu
-flatpak
-iftop
-nmap
-wireguard-tools
-polkit
-pulseaudio
-pavucontrol
-keepassxc
-nfs-utils
-unbound
-dnssec-anchors
-openresolv
-postgresql-libs
-transmission-qt
 thunar
+rxvt-unicode
+
+# apps
+flatpak
+keepassxc
+transmission-qt
+
+# system
+sudo
+zsh
+nfs-utils
+wireguard-tools
+unzip
+curl
+wget
+xclip
+nano
+vim
+xclip
+
+# tools
+nmap
 rsync
+iftop
+whois
+traceroute
+
+# development
+python
+python-pip
+postgresql-libs
