@@ -15,6 +15,7 @@ whois
 traceroute
 net-tools
 ethtool
+nmap
 
 lightdm
 lightdm-gtk-greeter
@@ -41,9 +42,8 @@ keepassxc
 transmission-qt
 filezilla
 torbrowser-launcher
-nmap
+libreoffice-fresh
 
 python
 python-pip
 postgresql-libs
-docker
