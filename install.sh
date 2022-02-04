@@ -9,8 +9,5 @@ flatpak install com.github.Eloston.UngoogledChromium
 # unbound
 sudo curl --output /etc/unbound/root.hints https://www.internic.net/domain/named.cache
 
-
-echo 'name_servers="::1 127.0.0.1"
-resolv_conf_options="trust-ad"' | sudo tee /etc/resolvconf.conf
-
+sudo cp resolvconf.conf /etc/resolvconf.conf
 sudo resolvconf -u
