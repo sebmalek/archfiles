@@ -11,3 +11,6 @@ sudo curl --output /etc/unbound/root.hints https://www.internic.net/domain/named
 
 sudo cp resolvconf.conf /etc/resolvconf.conf
 sudo resolvconf -u
+
+sudo cp unbound.conf /etc/unbound/unbound.conf
+sudo systemctl restart unbound.service
