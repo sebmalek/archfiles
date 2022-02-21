@@ -1,5 +1,6 @@
 sudo
 zsh
+zsh-autosuggestions
 nfs-utils
 wireguard-tools
 unzip
