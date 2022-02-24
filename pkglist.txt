@@ -6,7 +6,6 @@ wireguard-tools
 unzip
 curl
 wget
-xclip
 nano
 vi
 xclip
