@@ -3,6 +3,8 @@
 # fail on error
 set -e
 
+localectl set-keymap --no-convert croat
+
 pvcreate /dev/mapper/cryptlvm
 vgcreate vg /dev/mapper/cryptlvm
 
