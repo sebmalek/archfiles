@@ -30,6 +30,8 @@ genfstab -U /mnt >> /mnt/etc/fstab
 
 arch-chroot /mnt
 
+echo 'KEYMAP=croat' > /etc/vconsole.conf
+
 ln -sf /usr/share/zoneinfo/Europe/Zagreb /etc/localtime
 hwclock --systohc
 
