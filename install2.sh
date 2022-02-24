@@ -3,6 +3,8 @@
 # fail on error
 set -e
 
+timedatectl set-ntp true
+
 localectl set-keymap --no-convert croat
 
 pvcreate /dev/mapper/cryptlvm
