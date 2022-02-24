@@ -25,6 +25,7 @@ filezilla
 libreoffice-fresh
 libfido2
 postgresql-libs
+python-pip
 
 xclip
 lightdm
@@ -40,6 +41,3 @@ polkit
 expat
 pulseaudio
 pavucontrol
-
-python
-python-pip
