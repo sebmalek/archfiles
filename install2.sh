@@ -26,7 +26,7 @@ mkdir /mnt/efi
 mount /dev/nvme0n1p2 /mnt/efi
 
 sed -i s/#ParallelDownloads/ParallelDownloads/g /etc/pacman.conf
-pacstrap /mnt base linux-hardened linux-firmware mkinitcpio lvm2 nano grub efibootmgr intel-ucode wget
+pacstrap /mnt base linux-hardened linux-firmware mkinitcpio lvm2 nano grub efibootmgr intel-ucode wget zsh
 
 genfstab -U /mnt >> /mnt/etc/fstab
 
@@ -45,7 +45,7 @@ echo 'LANG=en_US.UTF-8' > /etc/locale.conf
 
 # TODO: /etc/hosts, /etc/hostname
 
-useradd -m -G wheel malek
+useradd -m -s /bin/zsh -G wheel malek
 
 # for chromium
 echo 'kernel.unprivileged_userns_clone = 1' > /etc/sysctl.d/00-local-userns.conf
