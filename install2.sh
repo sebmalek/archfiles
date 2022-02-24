@@ -32,6 +32,8 @@ genfstab -U /mnt >> /mnt/etc/fstab
 
 arch-chroot /mnt
 
+sed -i 's/^#\s*\(%wheel\s\+ALL=(ALL:ALL)\s\+NOPASSWD:\s\+ALL\)/\1/' /etc/sudoers
+
 echo 'KEYMAP=croat' > /etc/vconsole.conf
 
 ln -sf /usr/share/zoneinfo/Europe/Zagreb /etc/localtime
