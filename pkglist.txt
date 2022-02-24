@@ -41,7 +41,6 @@ pavucontrol
 keepassxc
 transmission-qt
 filezilla
-torbrowser-launcher
 libreoffice-fresh
 
 python
