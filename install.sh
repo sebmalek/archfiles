@@ -1,7 +1,5 @@
 #!/bin/bash
 
-sed -i s/#ParallelDownloads/ParallelDownloads/g /etc/pacman.conf
-
 pacman -S - < pkglist.txt
 
 #usermod -a -G wheel malek

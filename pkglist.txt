@@ -5,8 +5,6 @@ nfs-utils
 wireguard-tools
 openresolv
 unzip
-curl
-wget
 nano
 htop
 whois
