@@ -45,8 +45,10 @@ sed -i '/#en_US.UTF-8/s/^#//g' /etc/locale.gen
 locale-gen
 echo 'LANG=en_US.UTF-8' > /etc/locale.conf
 
-# TODO: /etc/hosts, /etc/hostname
-#echo 'arch' > /etc/hostname
+echo -e '127.0.0.1\tlocalhost
+::1\t\tlocalhost
+127.0.1.1\tarch.localdomain\tarch' > /etc/hosts
+echo 'arch' > /etc/hostname
 
 useradd -m -s /bin/zsh -G wheel malek
 
