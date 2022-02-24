@@ -77,3 +77,6 @@ echo '[main]
 dns=none' > /etc/NetworkManager/conf.d/dns.conf
 
 chmod 700 /boot
+
+sed -i '/^BUILDENV/s/\!ccache/ccache/' /etc/makepkg.conf
+sed -i '/#MAKEFLAGS=/c MAKEFLAGS="-j$(nproc)"' /etc/makepkg.conf
