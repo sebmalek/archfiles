@@ -25,6 +25,7 @@ libfido2
 postgresql-libs
 python-pip
 gcc
+make
 
 xclip
 lightdm
