@@ -3,24 +3,31 @@ zsh
 zsh-autosuggestions
 nfs-utils
 wireguard-tools
+openresolv
 unzip
 curl
 wget
 nano
-vi
-xclip
-rsync
-iftop
 whois
 traceroute
 net-tools
 ethtool
 nmap
+iftop
+rsync
+unbound
+dnssec-anchors
+keepassxc
+transmission-qt
+filezilla
+libreoffice-fresh
+
+vi
+xclip
 
 lightdm
 lightdm-gtk-greeter
 numlockx
-
 i3-wm
 i3status
 i3lock
@@ -30,18 +37,10 @@ rxvt-unicode
 
 polkit
 
-unbound
-dnssec-anchors
 expat
-openresolv
 
 pulseaudio
 pavucontrol
-
-keepassxc
-transmission-qt
-filezilla
-libreoffice-fresh
 
 python
 python-pip
