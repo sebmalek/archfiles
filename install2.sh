@@ -83,4 +83,5 @@ echo 'max_files = 0' >> /etc/ccache.conf
 
 sed -i '/^BUILDENV/s/\!ccache/ccache/' /etc/makepkg.conf
 sed -i '/#MAKEFLAGS=/c MAKEFLAGS="-j$(nproc)"' /etc/makepkg.conf
+sed -i 's/^COMPRESSGZ.*/COMPRESSGZ=(pigz -c -f -n)/' /etc/makepkg.conf
 sed -i '/^COMPRESSXZ/s/\xz/xz -T 0/' /etc/makepkg.conf
