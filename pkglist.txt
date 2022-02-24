@@ -24,6 +24,7 @@ libreoffice-fresh
 libfido2
 postgresql-libs
 python-pip
+gcc
 
 xclip
 lightdm
