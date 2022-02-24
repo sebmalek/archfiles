@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sed -i s/#ParallelDownloads/ParallelDownloads/g /etc/pacman.conf
+
 sudo pacman -S - < pkglist.txt
 
 # unbound
