@@ -8,6 +8,7 @@ unzip
 curl
 wget
 nano
+htop
 whois
 traceroute
 net-tools
@@ -24,7 +25,6 @@ libreoffice-fresh
 
 vi
 xclip
-
 lightdm
 lightdm-gtk-greeter
 numlockx
@@ -34,11 +34,8 @@ i3lock
 dmenu
 thunar
 rxvt-unicode
-
 polkit
-
 expat
-
 pulseaudio
 pavucontrol
 
