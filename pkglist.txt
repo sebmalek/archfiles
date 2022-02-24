@@ -1,6 +1,4 @@
-sudo
 man-db
-zsh
 zsh-autosuggestions
 nfs-utils
 wireguard-tools
