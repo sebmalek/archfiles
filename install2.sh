@@ -52,7 +52,7 @@ echo -e '127.0.0.1\tlocalhost
 127.0.1.1\tarch.localdomain\tarch' > /etc/hosts
 echo 'arch' > /etc/hostname
 
-useradd -m -s /bin/zsh -G wheel malek
+useradd -m -s /bin/zsh -G wheel -c 'Sebastian Malek' malek
 
 # for chromium
 echo 'kernel.unprivileged_userns_clone = 1' > /etc/sysctl.d/00-local-userns.conf
