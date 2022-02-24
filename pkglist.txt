@@ -32,6 +32,7 @@ rxvt-unicode
 polkit
 
 unbound
+dnssec-anchors
 expat
 openresolv
 
