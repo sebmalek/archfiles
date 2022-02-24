@@ -2,7 +2,12 @@
 
 sed -i s/#ParallelDownloads/ParallelDownloads/g /etc/pacman.conf
 
-sudo pacman -S - < pkglist.txt
+pacman -S - < pkglist.txt
+
+#usermod -a -G wheel malek
+
+systemctl enable gdm.service
+systemctl enable NetworkManager.service
 
 # unbound
 sudo curl --output /etc/unbound/root.hints https://www.internic.net/domain/named.cache
