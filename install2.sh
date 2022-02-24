@@ -46,6 +46,7 @@ locale-gen
 echo 'LANG=en_US.UTF-8' > /etc/locale.conf
 
 # TODO: /etc/hosts, /etc/hostname
+#echo 'arch' > /etc/hostname
 
 useradd -m -s /bin/zsh -G wheel malek
 
@@ -67,5 +68,8 @@ sed -i "s|^GRUB_CMDLINE_LINUX=.*|GRUB_CMDLINE_LINUX=${GRUBCMD}|g" /etc/default/g
 
 grub-install --target=x86_64-efi --efi-directory=/efi
 grub-mkconfig -o /boot/grub/grub.cfg
+
+echo '[main]
+dns=none' > /etc/NetworkManager/conf.d/dns.conf
 
 chmod 700 /boot
