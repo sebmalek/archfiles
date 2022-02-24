@@ -8,7 +8,6 @@ openresolv
 unzip
 pigz
 htop
-libfido2
 whois
 traceroute
 net-tools
@@ -24,6 +23,8 @@ keepassxc
 transmission-qt
 filezilla
 libreoffice-fresh
+libfido2
+postgresql-libs
 
 xclip
 lightdm
@@ -42,4 +43,3 @@ pavucontrol
 
 python
 python-pip
-postgresql-libs
