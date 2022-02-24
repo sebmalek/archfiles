@@ -5,8 +5,8 @@ nfs-utils
 wireguard-tools
 openresolv
 unzip
-nano
 htop
+libfido2
 whois
 traceroute
 net-tools
