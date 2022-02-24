@@ -41,6 +41,8 @@ echo 'LANG=en_US.UTF-8' > /etc/locale.conf
 
 # TODO: /etc/hosts, /etc/hostname
 
+useradd -m -G wheel malek
+
 mkdir /root/secrets && chmod 700 /root/secrets
 head -c 64 /dev/urandom > /root/secrets/crypto_keyfile.bin && chmod 600 /root/secrets/crypto_keyfile.bin
 cryptsetup -v luksAddKey -i 1 /dev/nvme0n1p3 /root/secrets/crypto_keyfile.bin
