@@ -25,7 +25,6 @@ transmission-qt
 filezilla
 libreoffice-fresh
 
-vi
 xclip
 lightdm
 lightdm-gtk-greeter
