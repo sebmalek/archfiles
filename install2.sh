@@ -5,8 +5,6 @@ set -eo pipefail
 
 timedatectl set-ntp true
 
-localectl set-keymap --no-convert croat
-
 pvcreate /dev/mapper/cryptlvm
 vgcreate vg /dev/mapper/cryptlvm
 
