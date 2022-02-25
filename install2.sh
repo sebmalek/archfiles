@@ -53,6 +53,9 @@ chmod 700 /boot
 echo 'Installing packages'
 pacman -S - < pkglist.txt
 
+systemctl enable gdm.service
+systemctl enable NetworkManager.service
+
 echo 'Configuring NetworkManager'
 echo '[main]
 dns=none' > /etc/NetworkManager/conf.d/dns.conf
