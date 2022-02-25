@@ -30,19 +30,6 @@ useradd -m -s /bin/zsh -G wheel -c 'Sebastian Malek' malek
 # for chromium
 echo 'kernel.unprivileged_userns_clone = 1' > /etc/sysctl.d/00-local-userns.conf
 
-echo '[main]
-dns=none' > /etc/NetworkManager/conf.d/dns.conf
-
-echo 'Configuring ccache'
-echo 'max_size = 10.0G
-max_files = 0' >> /etc/ccache.conf
-
-echo 'Configuring makepkg'
-sed -i '/^BUILDENV/s/\!ccache/ccache/' /etc/makepkg.conf
-sed -i '/#MAKEFLAGS=/c MAKEFLAGS="-j$(nproc)"' /etc/makepkg.conf
-sed -i 's/^COMPRESSGZ.*/COMPRESSGZ=(pigz -c -f -n)/' /etc/makepkg.conf
-sed -i '/^COMPRESSXZ/s/\xz/xz -T 0/' /etc/makepkg.conf
-
 mkdir /root/secrets && chmod 700 /root/secrets
 head -c 64 /dev/urandom > /root/secrets/crypto_keyfile.bin && chmod 600 /root/secrets/crypto_keyfile.bin
 cryptsetup -v luksAddKey -i 1 /dev/nvme0n1p3 /root/secrets/crypto_keyfile.bin
@@ -64,3 +51,17 @@ chmod 700 /boot
 
 echo 'Installing packages'
 pacman -S - < pkglist.txt
+
+echo 'Configuring NetworkManager'
+echo '[main]
+dns=none' > /etc/NetworkManager/conf.d/dns.conf
+
+echo 'Configuring ccache'
+echo 'max_size = 10.0G
+max_files = 0' >> /etc/ccache.conf
+
+echo 'Configuring makepkg'
+sed -i '/^BUILDENV/s/\!ccache/ccache/' /etc/makepkg.conf
+sed -i '/#MAKEFLAGS=/c MAKEFLAGS="-j$(nproc)"' /etc/makepkg.conf
+sed -i 's/^COMPRESSGZ.*/COMPRESSGZ=(pigz -c -f -n)/' /etc/makepkg.conf
+sed -i '/^COMPRESSXZ/s/\xz/xz -T 0/' /etc/makepkg.conf
