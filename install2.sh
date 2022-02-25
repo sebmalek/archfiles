@@ -78,8 +78,8 @@ chmod 700 /boot
 echo '[main]
 dns=none' > /etc/NetworkManager/conf.d/dns.conf
 
-echo 'max_size = 10.0G' >> /etc/ccache.conf
-echo 'max_files = 0' >> /etc/ccache.conf
+echo 'max_size = 10.0G
+max_files = 0' >> /etc/ccache.conf
 
 sed -i '/^BUILDENV/s/\!ccache/ccache/' /etc/makepkg.conf
 sed -i '/#MAKEFLAGS=/c MAKEFLAGS="-j$(nproc)"' /etc/makepkg.conf
