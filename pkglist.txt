@@ -21,6 +21,7 @@ keepassxc
 transmission-qt
 filezilla
 libreoffice-fresh
+vlc
 libfido2
 postgresql-libs
 python-pip
