@@ -54,14 +54,15 @@ echo 'Installing packages'
 pacman -S - < pkglist.txt
 
 systemctl enable gdm.service
-systemctl enable NetworkManager.service
 
 echo 'Configuring NetworkManager'
 echo '[main]
 dns=none' > /etc/NetworkManager/conf.d/dns.conf
+systemctl enable NetworkManager.service
 
 echo 'Configuring unbound'
 mv /unbound.conf /etc/unbound/unbound.conf
+systemctl enable unbound.service
 
 echo 'Configuring resolvconf'
 mv /resolvconf.conf /etc/resolvconf.conf
