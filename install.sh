@@ -39,5 +39,8 @@ cp unbound.conf /mnt/unbound.conf
 cp resolvconf.conf /mnt/resolvconf.conf
 arch-chroot /mnt ./install2.sh
 
+rm /mnt/pkglist.txt
+rm /mnt/install2.sh
+
 umount -R /mnt
 reboot
