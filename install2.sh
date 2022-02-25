@@ -60,6 +60,10 @@ dns=none' > /etc/NetworkManager/conf.d/dns.conf
 echo 'Configuring unbound'
 mv /unbound.conf /etc/unbound/unbound.conf
 
+echo 'Configuring resolvconf'
+mv /resolvconf.conf /etc/resolvconf.conf
+resolvconf -u
+
 echo 'Configuring ccache'
 echo 'max_size = 10.0G
 max_files = 0' >> /etc/ccache.conf
