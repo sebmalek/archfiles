@@ -36,14 +36,15 @@ arch-chroot /mnt
 
 sed -i 's/^#\s*\(%wheel\s\+ALL=(ALL:ALL)\s\+NOPASSWD:\s\+ALL\)/\1/' /etc/sudoers
 
-echo 'KEYMAP=croat' > /etc/vconsole.conf
-
 ln -sf /usr/share/zoneinfo/Europe/Zagreb /etc/localtime
 hwclock --systohc
 
 sed -i s/#ParallelDownloads/ParallelDownloads/g /etc/pacman.conf
 
+echo 'KEYMAP=croat' > /etc/vconsole.conf
+
 sed -i '/#en_US.UTF-8/s/^#//g' /etc/locale.gen
+sed -i '/#hr_HR.UTF-8/s/^#//g' /etc/locale-gen
 locale-gen
 echo 'LANG=en_US.UTF-8' > /etc/locale.conf
 
