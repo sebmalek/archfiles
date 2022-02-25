@@ -3,7 +3,7 @@
 # fail on error
 set -eo pipefail
 
-# time
+echo 'Setting timezone'
 ln -sf /usr/share/zoneinfo/Europe/Zagreb /etc/localtime
 hwclock --systohc
 
@@ -30,10 +30,10 @@ useradd -m -s /bin/zsh -G wheel -c 'Sebastian Malek' malek
 # for chromium
 echo 'kernel.unprivileged_userns_clone = 1' > /etc/sysctl.d/00-local-userns.conf
 
-# misc
 echo '[main]
 dns=none' > /etc/NetworkManager/conf.d/dns.conf
 
+echo 'Configuring ccache'
 echo 'max_size = 10.0G
 max_files = 0' >> /etc/ccache.conf
 
