@@ -25,5 +25,3 @@ n
 8309
 w
 ```
-5. `cryptsetup luksFormat --type luks1 --use-random -S 1 -s 512 -h sha512 -i 5000 /dev/nvme0n1p3`
-6. `cryptsetup open /dev/nvme0n1p3 cryptlvm`
