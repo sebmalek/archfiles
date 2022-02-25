@@ -29,3 +29,4 @@ make
 gnome
 gnome-tweaks
 gnome-shell-extension-appindicator
+networkmanager
