@@ -40,3 +40,4 @@ cp resolvconf.conf /mnt/resolvconf.conf
 arch-chroot /mnt ./install2.sh
 
 umount -R /mnt
+reboot
