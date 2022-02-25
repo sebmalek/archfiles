@@ -66,7 +66,7 @@ systemctl enable unbound.service
 
 echo 'Configuring resolvconf'
 mv /resolvconf.conf /etc/resolvconf.conf
-resolvconf -u
+#resolvconf -u
 
 echo 'Configuring ccache'
 echo 'max_size = 20.0G
