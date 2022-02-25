@@ -1,5 +1,4 @@
 man-db
-zsh-autosuggestions
 nfs-utils
 wireguard-tools
 openresolv
