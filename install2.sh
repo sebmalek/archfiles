@@ -56,6 +56,9 @@ echo 'Configuring NetworkManager'
 echo '[main]
 dns=none' > /etc/NetworkManager/conf.d/dns.conf
 
+echo 'Configuring unbound'
+mv /unbound.conf /etc/unbound.conf
+
 echo 'Configuring ccache'
 echo 'max_size = 10.0G
 max_files = 0' >> /etc/ccache.conf
