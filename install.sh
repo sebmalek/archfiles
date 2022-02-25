@@ -1,21 +1,37 @@
 #!/bin/bash
 
-pacman -S - < pkglist.txt
+# fail on error
+set -eo pipefail
 
-systemctl enable gdm.service
-systemctl enable NetworkManager.service
+timedatectl set-ntp true
 
-# unbound
-curl --output /etc/unbound/root.hints https://www.internic.net/domain/named.cache
+pvcreate /dev/mapper/cryptlvm
+vgcreate vg /dev/mapper/cryptlvm
 
-# auto update root hints
-cp roothints.service /etc/systemd/system/roothints.service
-cp roothints.timer /etc/systemd/system/roothints.timer
-systemctl daemon-reload
-systemctl enable --now roothints.timer
+lvcreate -L 12G vg -n swap
+lvcreate -L 50G vg -n root
+lvcreate -l 100%FREE vg -n home
 
-cp resolvconf.conf /etc/resolvconf.conf
-resolvconf -u
+mkfs.ext4 /dev/vg/root
+mkfs.ext4 /dev/vg/home
+mkswap /dev/vg/swap
 
-cp unbound.conf /etc/unbound/unbound.conf
-systemctl restart unbound.service
+mount /dev/vg/root /mnt
+mkdir /mnt/home
+mount /dev/vg/home /mnt/home
+swapon /dev/vg/swap
+
+mkfs.fat -F32 /dev/nvme0n1p2
+mkdir /mnt/efi
+mount /dev/nvme0n1p2 /mnt/efi
+
+sed -i s/#ParallelDownloads/ParallelDownloads/g /etc/pacman.conf
+pacstrap /mnt base linux-hardened linux-firmware mkinitcpio lvm2 nano grub efibootmgr intel-ucode wget zsh sudo
+
+genfstab -U /mnt >> /mnt/etc/fstab
+
+cp configure.sh /mnt/install2.sh
+cp pkglist.txt /mnt/pkglist.txt
+arch-chroot /mnt ./install2.sh
+
+umount -R /mnt
