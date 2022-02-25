@@ -26,6 +26,7 @@ echo 'arch' > /etc/hostname
 echo 'Configuring sudo'
 sed -i 's/^#\s*\(%wheel\s\+ALL=(ALL:ALL)\s\+NOPASSWD:\s\+ALL\)/\1/' /etc/sudoers
 useradd -m -s /bin/zsh -G wheel -c 'Sebastian Malek' malek
+passwd malek
 
 # for chromium
 echo 'kernel.unprivileged_userns_clone = 1' > /etc/sysctl.d/00-local-userns.conf
