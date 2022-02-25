@@ -65,7 +65,7 @@ mv /resolvconf.conf /etc/resolvconf.conf
 resolvconf -u
 
 echo 'Configuring ccache'
-echo 'max_size = 10.0G
+echo 'max_size = 20.0G
 max_files = 0' >> /etc/ccache.conf
 
 echo 'Configuring makepkg'
