@@ -27,6 +27,10 @@ python-pip
 gcc
 make
 
+gnome
+gnome-tweaks
+gnome-shell-extension-appindicator
+
 xclip
 lightdm
 lightdm-gtk-greeter
