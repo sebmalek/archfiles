@@ -30,7 +30,7 @@ pacstrap /mnt base linux-hardened linux-firmware mkinitcpio lvm2 nano grub efibo
 
 genfstab -U /mnt >> /mnt/etc/fstab
 
-cp configure.sh /mnt/install2.sh
+cp install2.sh /mnt/install2.sh
 cp pkglist.txt /mnt/pkglist.txt
 arch-chroot /mnt ./install2.sh
 
