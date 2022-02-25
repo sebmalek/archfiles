@@ -58,7 +58,7 @@ echo '[main]
 dns=none' > /etc/NetworkManager/conf.d/dns.conf
 
 echo 'Configuring unbound'
-mv /unbound.conf /etc/unbound.conf
+mv /unbound.conf /etc/unbound/unbound.conf
 
 echo 'Configuring ccache'
 echo 'max_size = 10.0G
