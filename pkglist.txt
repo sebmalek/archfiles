@@ -15,6 +15,7 @@ rsync
 unbound
 dnssec-anchors
 ccache
+git
 neofetch
 keepassxc
 transmission-qt
