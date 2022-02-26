@@ -30,6 +30,7 @@ passwd malek
 
 # for chromium
 echo 'kernel.unprivileged_userns_clone = 1' > /etc/sysctl.d/00-local-userns.conf
+echo 'vm.swappiness = 10' > /etc/sysctl.d/10-tweaks.conf
 
 mkdir /root/secrets && chmod 700 /root/secrets
 head -c 64 /dev/urandom > /root/secrets/crypto_keyfile.bin && chmod 600 /root/secrets/crypto_keyfile.bin
