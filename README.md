@@ -26,12 +26,9 @@ n
 w
 ```
 
-## misc
-
-# unbound
-`curl --output /etc/unbound/root.hints https://www.internic.net/domain/named.cache`
-
+### unbound
 ```
+curl --output /etc/unbound/root.hints https://www.internic.net/domain/named.cache'
 cp roothints.service /etc/systemd/system/roothints.service
 cp roothints.timer /etc/systemd/system/roothints.timer
 systemctl daemon-reload
