@@ -8,6 +8,7 @@ htop
 whois
 traceroute
 net-tools
+inetutils
 ethtool
 nmap
 iftop
