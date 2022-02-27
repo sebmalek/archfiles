@@ -12,6 +12,7 @@ inetutils
 ethtool
 nmap
 iftop
+tcpdump
 rsync
 unbound
 dnssec-anchors
