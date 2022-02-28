@@ -41,6 +41,3 @@ arch-chroot /mnt ./install2.sh
 
 rm /mnt/pkglist.txt
 rm /mnt/install2.sh
-
-umount -R /mnt
-reboot
