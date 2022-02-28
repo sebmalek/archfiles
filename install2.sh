@@ -55,7 +55,7 @@ BLKID=$(blkid | grep nvme0n1p3 | cut -d '"' -f 2)
 GRUBCMD="\"cryptdevice=UUID=$BLKID:cryptlvm root=/dev/vg/root cryptkey=rootfs:/root/secrets/crypto_keyfile.bin random.trust_cpu=on\""
 sed -i "s|^GRUB_CMDLINE_LINUX=.*|GRUB_CMDLINE_LINUX=${GRUBCMD}|g" /etc/default/grub
 
-grub-install --target=x86_64-efi --efi-directory=/efi
+grub-install --target=x86_64-efi --efi-directory=/efi --modules="luks2 part_gpt cryptodisk gcry_rijndael pbkdf2 gcry_sha512"
 grub-mkconfig -o /boot/grub/grub.cfg
 
 chmod 700 /boot
