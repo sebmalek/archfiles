@@ -5,8 +5,8 @@ set -eo pipefail
 
 timedatectl set-ntp true
 
-cryptsetup luksFormat --type luks1 -S 1 -s 512 -h sha512 -i 2500 /dev/nvme0n1p3
-cryptsetup open /dev/nvme0n1p3 cryptlvm
+cryptsetup luksFormat --type luks1 -S 1 -s 512 -h sha512 -i 2500 /dev/nvme0n1p2
+cryptsetup open /dev/nvme0n1p2 cryptlvm
 
 pvcreate /dev/mapper/cryptlvm
 vgcreate vg /dev/mapper/cryptlvm
