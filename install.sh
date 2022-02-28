@@ -24,9 +24,9 @@ mkdir /mnt/home
 mount /dev/vg/home /mnt/home
 swapon /dev/vg/swap
 
-mkfs.fat -F32 /dev/nvme0n1p2
+mkfs.fat -F32 /dev/nvme0n1p1
 mkdir /mnt/efi
-mount /dev/nvme0n1p2 /mnt/efi
+mount /dev/nvme0n1p1 /mnt/efi
 
 sed -i s/#ParallelDownloads/ParallelDownloads/g /etc/pacman.conf
 pacstrap /mnt base linux-hardened linux-firmware mkinitcpio lvm2 nano grub efibootmgr intel-ucode wget zsh sudo
