@@ -11,7 +11,7 @@ echo 'Configuring pacman'
 sed -i s/#ParallelDownloads/ParallelDownloads/g /etc/pacman.conf
 
 echo 'Setting locale'
-localectl set-x11-keymap hr
+#localectl set-x11-keymap hr
 echo 'KEYMAP=croat' > /etc/vconsole.conf
 sed -i '/#en_US.UTF-8/s/^#//g' /etc/locale.gen
 sed -i '/#hr_HR.UTF-8/s/^#//g' /etc/locale.gen
