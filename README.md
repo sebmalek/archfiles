@@ -11,11 +11,6 @@ o
 n
 [Enter]
 0
-+1M
-ef02
-n
-[Enter]
-[Enter]
 +550M
 ef00
 n
