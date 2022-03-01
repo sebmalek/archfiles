@@ -46,6 +46,7 @@ head -c 64 /dev/urandom > /root/secrets/crypto_keyfile.bin && chmod 600 /root/se
 cryptsetup -v luksAddKey -i 1 /dev/nvme0n1p2 /root/secrets/crypto_keyfile.bin
 
 sed -i "s|^HOOKS=.*|HOOKS=(base udev autodetect keyboard modconf block encrypt lvm2 filesystems fsck)|g" /etc/mkinitcpio.conf
+sed -i "s|^MODULES=.*|MODULES=(nvidia nvidia_modeset nvidia_uvm nvidia_drm)|g" /etc/mkinitcpio.conf
 sed -i "s|^FILES=.*|FILES=(/root/secrets/crypto_keyfile.bin)|g" /etc/mkinitcpio.conf
 #mkinitcpio -p linux-hardened
 
