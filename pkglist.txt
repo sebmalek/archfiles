@@ -32,6 +32,7 @@ filezilla
 libreoffice-fresh
 vlc
 libfido2
+yubikey-manager
 postgresql-libs
 python-pip
 gcc
