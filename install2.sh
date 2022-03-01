@@ -47,7 +47,7 @@ cryptsetup -v luksAddKey -i 1 /dev/nvme0n1p2 /root/secrets/crypto_keyfile.bin
 
 sed -i "s|^HOOKS=.*|HOOKS=(base udev autodetect keyboard modconf block encrypt lvm2 filesystems fsck)|g" /etc/mkinitcpio.conf
 sed -i "s|^FILES=.*|FILES=(/root/secrets/crypto_keyfile.bin)|g" /etc/mkinitcpio.conf
-mkinitcpio -p linux-hardened
+mkinitcpio -p linux
 
 echo 'Configuring grub'
 sed -i '/GRUB_ENABLE_CRYPTODISK/s/^#//g' /etc/default/grub

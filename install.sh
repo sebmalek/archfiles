@@ -29,7 +29,7 @@ mkdir /mnt/efi
 mount /dev/nvme0n1p1 /mnt/efi
 
 sed -i s/#ParallelDownloads/ParallelDownloads/g /etc/pacman.conf
-pacstrap /mnt base linux-hardened linux-firmware mkinitcpio lvm2 nano grub efibootmgr intel-ucode wget zsh sudo
+pacstrap /mnt base linux linux-firmware mkinitcpio lvm2 nano grub efibootmgr intel-ucode wget zsh sudo
 
 genfstab -U /mnt >> /mnt/etc/fstab
 
