@@ -36,6 +36,8 @@ python-pip
 gcc
 make
 pkgconf
+patch
+fakeroot
 gnome
 gnome-tweaks
 gnome-shell-extension-appindicator
