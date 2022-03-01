@@ -29,3 +29,9 @@ cp roothints.timer /etc/systemd/system/roothints.timer
 systemctl daemon-reload
 systemctl enable --now roothints.timer
 ```
+
+## Post-install:
+
+* `localectl set-x11-keymap hr`
+* `gsettings set org.gnome.shell disable-user-extensions false`
+* `gnome-extensions enable appindicatorsupport@rgcjonas.gmail.com`
