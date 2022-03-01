@@ -33,5 +33,6 @@ systemctl enable --now roothints.timer
 ## Post-install:
 
 * `localectl set-x11-keymap hr`
+* `resolvconf -u` (as root)
 * `gsettings set org.gnome.shell disable-user-extensions false`
 * `gnome-extensions enable appindicatorsupport@rgcjonas.gmail.com`
