@@ -18,14 +18,8 @@ usbutils
 rsync
 unbound
 dnssec-anchors
-virt-manager
 ccache
-git
 neofetch
-firefox
-thunderbird
-pidgin
-pidgin-otr
 screen
 keepassxc
 transmission-qt
