@@ -65,6 +65,12 @@ systemctl enable fstrim.timer
 echo 'Installing packages'
 pacman -S - < pkglist.txt
 
+echo 'Section "InputClass"
+        Identifier "system-keyboard"
+        MatchIsKeyboard "on"
+        Option "XkbLayout" "hr"
+EndSection' > /etc/X11/xorg.conf.d/00-keyboard.conf
+
 systemctl enable gdm.service
 
 echo 'Configuring NetworkManager'
