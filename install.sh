@@ -11,7 +11,7 @@ cryptsetup open /dev/nvme0n1p2 cryptlvm
 pvcreate /dev/mapper/cryptlvm
 vgcreate vg /dev/mapper/cryptlvm
 
-lvcreate -L 12G vg -n swap
+lvcreate -L 10G vg -n swap
 lvcreate -L 50G vg -n root
 lvcreate -l 100%FREE vg -n home
 
