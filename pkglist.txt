@@ -38,4 +38,5 @@ fakeroot
 gnome
 gnome-tweaks
 gnome-shell-extension-appindicator
+gnome-themes-extra
 networkmanager
