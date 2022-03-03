@@ -20,6 +20,7 @@ n
 8309
 w
 ```
+5. `./install.sh`
 
 ### unbound
 ```
@@ -32,7 +33,6 @@ systemctl enable --now roothints.timer
 
 ## Post-install:
 
-* `localectl set-x11-keymap hr`
-* `resolvconf -u` (as root)
+* `sudo resolvconf -u`
 * `gsettings set org.gnome.shell disable-user-extensions false`
 * `gnome-extensions enable appindicatorsupport@rgcjonas.gmail.com`
