@@ -4,7 +4,7 @@ To install, do the following:
 
 1. `localectl set-keymap croat`
 2. `pacman -Sy git`
-3. `git clone https://github.com/sebmalek/archfiles`
+3. `git clone https://github.com/sebmalek/archfiles.git`
 4. `gdisk /dev/nvme0n1`
 ```
 o
