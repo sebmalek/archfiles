@@ -99,3 +99,7 @@ sed -i '/^BUILDENV/s/\!ccache/ccache/' /etc/makepkg.conf
 sed -i '/#MAKEFLAGS=/c MAKEFLAGS="-j$(nproc)"' /etc/makepkg.conf
 sed -i 's/^COMPRESSGZ.*/COMPRESSGZ=(pigz -c -f -n)/' /etc/makepkg.conf
 sed -i '/^COMPRESSXZ/s/\xz/xz -T 0/' /etc/makepkg.conf
+
+echo 'Configuring nfs'
+mkdir /mnt/secrets
+echo -e '10.0.1.1:/secrets\t/mnt/secrets\tnfs\tvers=3,_netdev,noauto,x-systemd.automount,x-systemd.requires=wg-quick@wg0.service' >> /etc/fstab
