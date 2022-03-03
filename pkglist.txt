@@ -20,6 +20,7 @@ rsync
 unbound
 dnssec-anchors
 ccache
+youtube-dl
 neofetch
 screen
 keepassxc
