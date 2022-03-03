@@ -78,6 +78,10 @@ echo '[main]
 dns=none' > /etc/NetworkManager/conf.d/dns.conf
 systemctl enable NetworkManager.service
 
+echo 'Configuring nftables'
+mv /nftables.conf /etc/nftables.conf
+systemctl enable nftables.service
+
 echo 'Configuring unbound'
 mv /unbound.conf /etc/unbound/unbound.conf
 systemctl enable unbound.service

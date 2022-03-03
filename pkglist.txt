@@ -1,6 +1,7 @@
 man-db
 nfs-utils
 wireguard-tools
+nftables
 openvpn
 openresolv
 unzip

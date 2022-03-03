@@ -35,6 +35,7 @@ genfstab -U /mnt >> /mnt/etc/fstab
 
 cp install2.sh /mnt/install2.sh
 cp pkglist.txt /mnt/pkglist.txt
+cp nftables.conf /mnt/nftables.conf
 cp unbound.conf /mnt/unbound.conf
 cp resolvconf.conf /mnt/resolvconf.conf
 arch-chroot /mnt ./install2.sh
