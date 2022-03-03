@@ -28,6 +28,7 @@ libreoffice-fresh
 vlc
 libfido2
 yubikey-manager
+git
 postgresql-libs
 python-pip
 gcc
