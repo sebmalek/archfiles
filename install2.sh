@@ -60,7 +60,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 
 chmod 700 /boot
 
-systemctl enable fstrim.timer
+#systemctl enable fstrim.timer
 
 echo 'Installing packages'
 pacman -S - < pkglist.txt
