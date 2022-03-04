@@ -36,3 +36,4 @@ systemctl enable --now roothints.timer
 * `sudo resolvconf -u`
 * `gsettings set org.gnome.shell disable-user-extensions false`
 * `gnome-extensions enable appindicatorsupport@rgcjonas.gmail.com`
+* Append `discard,nodelalloc` to `/etc/fstab`, reboot
