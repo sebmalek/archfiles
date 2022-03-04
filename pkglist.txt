@@ -1,4 +1,5 @@
 nano
+apparmor
 man-db
 nfs-utils
 wireguard-tools
