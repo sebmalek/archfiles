@@ -52,7 +52,7 @@ mkinitcpio -p linux
 echo 'Configuring grub'
 sed -i '/GRUB_ENABLE_CRYPTODISK/s/^#//g' /etc/default/grub
 BLKID=$(blkid | grep nvme0n1p2 | cut -d '"' -f 2)
-GRUBCMD="\"cryptdevice=UUID=$BLKID:cryptlvm:allow-discards root=/dev/vg/root cryptkey=rootfs:/root/secrets/crypto_keyfile.bin random.trust_cpu=on\""
+GRUBCMD="\"cryptdevice=UUID=$BLKID:cryptlvm:allow-discards root=/dev/vg/root cryptkey=rootfs:/root/secrets/crypto_keyfile.bin lsm=landlock,lockdown,yama,apparmor,bpf random.trust_cpu=on\""
 sed -i "s|^GRUB_CMDLINE_LINUX=.*|GRUB_CMDLINE_LINUX=${GRUBCMD}|g" /etc/default/grub
 
 grub-install --target=x86_64-efi --efi-directory=/efi --modules="luks2 part_gpt part_msdos cryptodisk gcry_rijndael pbkdf2 gcry_sha512"
