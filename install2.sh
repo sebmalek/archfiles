@@ -61,6 +61,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 chmod 700 /boot
 
 #systemctl enable fstrim.timer
+sed -i 's/rw,relatime/rw,relatime,discard,nodelalloc/g' /etc/fstab
 
 echo 'Installing packages'
 pacman -S - < pkglist.txt
