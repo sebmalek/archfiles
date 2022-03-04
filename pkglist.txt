@@ -1,3 +1,4 @@
+nano
 man-db
 nfs-utils
 wireguard-tools
