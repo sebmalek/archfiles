@@ -21,6 +21,7 @@ unbound
 dnssec-anchors
 pipewire
 pipewire-pulse
+pipewire-jack
 wireplumber
 ccache
 youtube-dl
