@@ -19,6 +19,9 @@ usbutils
 rsync
 unbound
 dnssec-anchors
+pipewire
+pipewire-pulse
+wireplumber
 ccache
 youtube-dl
 neofetch
