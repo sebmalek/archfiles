@@ -26,11 +26,10 @@ echo 'arch' > /etc/hostname
 
 echo 'Configuring sudo'
 sed -i 's/^#\s*\(%wheel\s\+ALL=(ALL:ALL)\s\+NOPASSWD:\s\+ALL\)/\1/' /etc/sudoers
-useradd -m -s /bin/zsh -G wheel -c 'Sebastian Malek' malek
-passwd malek
 
 # for chromium
 echo 'kernel.unprivileged_userns_clone = 1' > /etc/sysctl.d/00-local-userns.conf
+
 echo 'vm.swappiness = 5' > /etc/sysctl.d/10-tweaks.conf
 
 echo 'Adding udev rules'
@@ -65,6 +64,9 @@ systemctl enable fstrim.timer
 
 echo 'Installing packages'
 pacman -S - < pkglist.txt
+
+useradd -m -s /bin/zsh -G wheel,wireshark -c 'Sebastian Malek' malek
+passwd malek
 
 echo 'Section "InputClass"
         Identifier "system-keyboard"
