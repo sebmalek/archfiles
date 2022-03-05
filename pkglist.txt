@@ -1,4 +1,5 @@
 nano
+geany
 apparmor
 man-db
 nfs-utils
