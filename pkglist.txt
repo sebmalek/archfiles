@@ -27,7 +27,7 @@ pipewire-pulse
 pipewire-jack
 wireplumber
 ccache
-youtube-dl
+yt-dlp
 neofetch
 screen
 torbrowser-launcher
