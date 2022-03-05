@@ -30,6 +30,7 @@ ccache
 youtube-dl
 neofetch
 screen
+torbrowser-launcher
 keepassxc
 transmission-qt
 filezilla
