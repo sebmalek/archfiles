@@ -33,6 +33,5 @@ systemctl enable --now roothints.timer
 
 ## Post-install:
 
-* `sudo resolvconf -u`
 * `gsettings set org.gnome.shell disable-user-extensions false`
 * `gnome-extensions enable appindicatorsupport@rgcjonas.gmail.com`
