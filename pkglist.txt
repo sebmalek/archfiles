@@ -19,6 +19,7 @@ ethtool
 nmap
 iftop
 tcpdump
+wireshark-qt
 rsync
 unbound
 dnssec-anchors
