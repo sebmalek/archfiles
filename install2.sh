@@ -89,6 +89,9 @@ systemctl enable unbound.service
 echo 'Configuring resolvconf'
 mv /resolvconf.conf /etc/resolvconf.conf
 #resolvconf -u
+echo 'nameserver ::1
+nameserver 127.0.0.1
+options trust-ad' > /etc/resolv.conf
 
 echo 'Configuring ccache'
 echo 'max_size = 20.0G
