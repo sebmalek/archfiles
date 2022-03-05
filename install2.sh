@@ -100,7 +100,7 @@ sed -i '/#MAKEFLAGS=/c MAKEFLAGS="-j$(nproc)"' /etc/makepkg.conf
 sed -i 's/^COMPRESSGZ.*/COMPRESSGZ=(pigz -c -f -n)/' /etc/makepkg.conf
 sed -i '/^COMPRESSXZ/s/\xz/xz -T 0/' /etc/makepkg.conf
 
-echo 'Configuring nfs'
+echo 'Configuring NFS mounts'
 mkdir /mnt/secrets
 chmod 600 /mnt/secrets
 chown malek:malek /mnt/secrets
