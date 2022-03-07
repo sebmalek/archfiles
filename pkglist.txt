@@ -45,6 +45,7 @@ postgresql-libs
 python-pip
 gcc
 make
+automake
 pkgconf
 patch
 fakeroot
