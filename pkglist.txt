@@ -30,6 +30,7 @@ wireplumber
 ccache
 neofetch
 duf
+lsof
 screen
 torbrowser-launcher
 keepassxc
