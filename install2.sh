@@ -44,6 +44,10 @@ mkdir /root/secrets && chmod 700 /root/secrets
 head -c 64 /dev/urandom > /root/secrets/crypto_keyfile.bin && chmod 600 /root/secrets/crypto_keyfile.bin
 cryptsetup -v luksAddKey -i 1 /dev/nvme0n1p2 /root/secrets/crypto_keyfile.bin
 
+echo 'blacklist mei
+blacklist mei_wdt
+blacklist iTCO_wdt' > /etc/modprobe.d/blacklist.conf
+
 sed -i "s|^HOOKS=.*|HOOKS=(base udev autodetect keyboard modconf block encrypt lvm2 filesystems fsck)|g" /etc/mkinitcpio.conf
 sed -i "s|^FILES=.*|FILES=(/root/secrets/crypto_keyfile.bin)|g" /etc/mkinitcpio.conf
 mkinitcpio -p linux
