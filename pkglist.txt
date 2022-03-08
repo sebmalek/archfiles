@@ -31,6 +31,7 @@ ccache
 neofetch
 duf
 lsof
+strace
 screen
 torbrowser-launcher
 keepassxc
