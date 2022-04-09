@@ -1,4 +1,5 @@
 nano
+vim
 geany
 apparmor
 man-db
