@@ -1,4 +1,4 @@
-# archfiles
+# Arch Linux files
 
 To install, do the following:
 
