@@ -44,6 +44,8 @@ vlc
 libfido2
 yubikey-manager
 git
+nodejs
+npm
 postgresql-libs
 python-pip
 gcc
