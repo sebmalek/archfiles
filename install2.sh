@@ -109,7 +109,7 @@ echo 'Configuring NFS mounts'
 mkdir /mnt/secrets
 chmod 600 /mnt/secrets
 chown malek:malek /mnt/secrets
-echo -e '10.0.1.1:/secrets\t/mnt/secrets\tnfs\tvers=3,_netdev,noauto,x-systemd.automount,x-systemd.requires=wg-quick@wg0.service' >> /etc/fstab
+echo -e '10.0.1.1:/home/secrets\t/mnt/secrets\tnfs\tvers=4.2,_netdev,noauto,x-systemd.automount,x-systemd.requires=wg-quick@wg0.service' >> /etc/fstab
 
 echo 'Enabling AppArmor'
 systemctl enable apparmor.service
